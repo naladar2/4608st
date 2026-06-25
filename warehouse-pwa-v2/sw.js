@@ -1,13 +1,5 @@
-const CACHE = 'warehouse-v11';
-// Путь к приложению на GitHub Pages — важно указать правильно
-const BASE = '/4608st';
-const ASSETS = [
-  BASE + '/',
-  BASE + '/index.html',
-  BASE + '/manifest.json',
-  BASE + '/icons/icon-192.png',
-  BASE + '/icons/icon-512.png'
-];
+const CACHE = 'warehouse-v12';
+const ASSETS = ['/', '/index.html', '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png'];
 const NETWORK_TIMEOUT = 4000;
 
 self.addEventListener('install', e => {
@@ -29,7 +21,6 @@ self.addEventListener('message', e => {
 self.addEventListener('fetch', e => {
   if (e.request.url.includes('script.google.com')) return;
   if (e.request.method !== 'GET') return;
-
   e.respondWith(
     Promise.race([
       fetch(e.request).then(response => {
