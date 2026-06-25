@@ -1,4 +1,4 @@
-const CACHE = 'warehouse-v10';
+const CACHE = 'warehouse-v11';
 // Путь к приложению на GitHub Pages — важно указать правильно
 const BASE = '/4608st';
 const ASSETS = [
